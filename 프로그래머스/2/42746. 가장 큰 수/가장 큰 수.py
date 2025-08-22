@@ -1,5 +1,5 @@
 def solution(numbers):
-    numbers.sort(key=lambda x: str(x) * 3, reverse=True)
+    numbers = [str(x) for x in numbers]
+    numbers.sort(key=lambda x: x*10, reverse=True)
     
-    answer = ''.join(str(x) for x in numbers)
-    return answer if answer[0] != "0" else "0"
+    return str(int(''.join(numbers)))
